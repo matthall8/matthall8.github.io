@@ -1,8 +1,14 @@
+/* Global CSS section */
+
 body {
   background-color: #fff;
   margin: 0 auto;
   font-family: arial,sans-serif;
   word-spacing:-.003em
+}
+
+img {
+  max-width: 100%;
 }
 
 /* Header section */
