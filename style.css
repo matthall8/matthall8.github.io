@@ -1,3 +1,57 @@
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+ 
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+ 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
 /* Global CSS section */
 
 body {
@@ -22,7 +76,37 @@ header {
 h1 {
   padding:0px;
   margin: 0;
-  float:left;
+  font-size: 1.7em;
+  font-weight:bold;
+}
+
+#menu-button {
+    vertical-align: bottom;
+    float: right;
+    padding: .375em; /* 6/16 = .375em */
+    margin: 0 .375em 0 2em; /* 6/16 = .375em, 32/16 = 2em */
+    opacity: .7;
+    cursor: pointer;
+     
+    transition: all .2s linear;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+     
+    background-color: #4D8EBC;
+    background-image: linear-gradient(top,rgba(100, 152, 190, .5),rgba(30, 82, 120, .5));
+    background-position: left bottom;
+    background-repeat: repeat-x;
+}
+
+#menu-button.selected,
+#menu-button:active {
+    opacity: 1;
+     
+    box-shadow: 0 1px  1px rgba(120, 120, 120, .2);
+    background-color: #2E6288;
+    background-image: linear-gradient(top,rgba(25, 68, 99, .5),rgba(30, 82, 120, .5));
+     
+    margin-bottom: -.375em; /* 6/16 = .375em */
 }
 
 nav {
@@ -63,6 +147,8 @@ h2 {
   padding:2px;
   margin: 20px 0px;
   border-bottom: #000 3px solid;
+  font-size: 1.4em;
+  font-weight:bold;
 }
 
 figure {
@@ -73,12 +159,19 @@ figure {
   padding-bottom: 20px;
 }
 
+
 .my_journey_box {
 	max-width: 216px;
 	float:left;
 	margin-right: 10px;
 	padding-right: 10px;
 	border-right: #d3d3d3 1px dotted;
+}
+
+@media only screen and (max-width: 800px) {
+  .my_journey_box {
+    border-right: none;
+  }
 }
 
 .my_journey_box_final {
@@ -117,7 +210,7 @@ figure {
 .main_section_box ul {
 	list-style-position: inside;
 	padding:0;
-	margin:20px 10px;
+	margin:20px 0px;
 }
 
 .main_section_box li {
@@ -143,6 +236,7 @@ h3 {
 	font-size: 1.03em;
 	margin: 0;
 	padding:0;
+  	font-weight:bold;
 }
 
 /* Footer */
