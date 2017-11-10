@@ -19,6 +19,8 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
+
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -60,10 +62,6 @@ body {
   font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
-img {
-  max-width: 100%;
-}
-
 /* Header section */
 
 header {
@@ -74,52 +72,8 @@ header {
 }
 
 h1 {
-  padding:0px;
-  margin: 0;
   font-size: 1.7em;
   font-weight:bold;
-}
-
-#menu-button {
-    vertical-align: bottom;
-    float: right;
-    padding: .375em; /* 6/16 = .375em */
-    margin: 0 .375em 0 2em; /* 6/16 = .375em, 32/16 = 2em */
-    opacity: .7;
-    cursor: pointer;
-     
-    transition: all .2s linear;
-    border-radius: 2px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
-     
-    background-color: #4D8EBC;
-    background-image: linear-gradient(top,rgba(100, 152, 190, .5),rgba(30, 82, 120, .5));
-    background-position: left bottom;
-    background-repeat: repeat-x;
-}
-
-#menu-button.selected,
-#menu-button:active {
-    opacity: 1;
-     
-    box-shadow: 0 1px  1px rgba(120, 120, 120, .2);
-    background-color: #2E6288;
-    background-image: linear-gradient(top,rgba(25, 68, 99, .5),rgba(30, 82, 120, .5));
-     
-    margin-bottom: -.375em; /* 6/16 = .375em */
-}
-
-nav {
-	text-align:right;
-}
-
-nav a {
-	background: #fff;
-	padding: 6px;
-	margin-left:5px;
-	color: #000;
-	text-decoration: none;
-	border-radius: 8px;
 }
 
 .clear_fix::after {
@@ -128,19 +82,13 @@ nav a {
     display: table;
 }
 
-header p {
-  line-height: 1.2;
-  padding: 2px;
-  margin: 0;
-}
-
 .wrapper {
   max-width: 975px;
   margin: 0 auto;
   padding: 0px 10px;
 }
 
-/* Main body */
+/* Main body - My Journey CSS */
 
 h2 {
   line-height: 1.2;
@@ -151,14 +99,17 @@ h2 {
   font-weight:bold;
 }
 
-figure {
-  margin: 0;
+h3 { 
+	font-size: 1.03em;
+	margin: 0;
+	padding:0;
+  	font-weight:bold;
 }
 
 #my_journey {
   padding-bottom: 20px;
+  overflow: hidden;
 }
-
 
 .my_journey_box {
 	max-width: 216px;
@@ -166,6 +117,8 @@ figure {
 	margin-right: 10px;
 	padding-right: 10px;
 	border-right: #d3d3d3 1px dotted;
+	padding-bottom: 100%;
+    margin-bottom: -100%;
 }
 
 @media only screen and (max-width: 800px) {
@@ -179,6 +132,8 @@ figure {
 	float:left;
 	margin-right: 10px;
 	padding-right: 10px;
+	padding-bottom: 100%;
+    margin-bottom: -100%;
 }
 
 #my_journey img {
@@ -193,6 +148,7 @@ figure {
 	margin-bottom: 12px;
 }		
 
+/* Main body - Main section CSS */
 
 #main_section {
   clear:both;
@@ -200,6 +156,7 @@ figure {
   border-top: #d3d3d3 1px solid;
   border-bottom: #d3d3d3 1px solid;
 }
+
 
 .main_section_box {
   float:left;
@@ -219,24 +176,6 @@ figure {
 
 .bold_text {
 	font-weight: bold;
-}
-
-.final {
-	border-right:none;!important
-}
-
-
-blockquote {
-  border-left: 5px #000 solid;
-  margin: 0;
-  padding: 5px 30px;
-}
-
-h3 { 
-	font-size: 1.03em;
-	margin: 0;
-	padding:0;
-  	font-weight:bold;
 }
 
 /* Footer */
